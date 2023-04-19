@@ -35,12 +35,12 @@ else
 fi
 ln -s /data/profile /config/profile
 
-if [ ! -d "/share/firefox" ]; then
-  mkdir -p /share/firefox
+if [ ! -d "/share/midori" ]; then
+  mkdir -p /share/midori
 fi
 rm -rf /config/downloads
 
-ln -s /share/firefox /config/downloads
+ln -s /share/midori /config/downloads
 
-/usr/bin/firefox --version
-exec /usr/bin/firefox "$@" >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
+/usr/bin/midori --version
+exec /usr/bin/midori "$@" >> /config/log/midori/output.log 2>> /config/log/midori/error.log
